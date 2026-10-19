@@ -14,7 +14,29 @@
 //The switch statement makes the pointer refer to the object selected by the user.
 //The call response->respond() executes the correct overridden function at runtime.
 //The same function call produces different behaviours depending on the object. This demonstrates runtime polymorphism.
+/*
+CLASS DIAGRAM (Runtime Polymorphism)
 
++----------------------------------+
+| EmergencyResponse (parent)       |
+|----------------------------------|
+| + virtual void respond()         |
++----------------------------------+
+        ^          ^          ^
+        |          |          |
+        | inherit (public)    |
+        |          |          |
++---------------+ +--------------------+ +--------------------+
+| Evacuation    | | ReliefDistribution | | DrainageClearing   |
+|---------------| |--------------------| |--------------------|
+| + respond()   | | + respond()        | | + respond()        |
+|   override    | |   override         | |   override         |
++---------------+ +--------------------+ +--------------------+
+
+EmergencyResponse* response is a base-class pointer.
+response->respond() calls the overridden version of the object
+selected by the user at runtime.
+*/
  import std;
 using namespace std;
 
