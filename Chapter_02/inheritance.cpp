@@ -12,6 +12,37 @@
 //Inspection inherits from WetlandSite and adds inspection information(encroachment and affected area)
 //RestorationOperation inherits from Inspection information and adds restoration information (seedlingsPlanted)
 // multi-level inheritance occurs when a class inherits(properties and functions)from another derived class, forming a chain of inheritance
+/*
+CLASS DIAGRAM (Multi-Level Inheritance)
+
++---------------------------------+
+| WetlandSite (base class)        |
+|---------------------------------|
+| + wetlandName                   |
+| + location                      |
+| + enterSiteDetails()            |
+| + displaySiteDetails()          |
++---------------------------------+
+               ^
+               | inherits (public)
++---------------------------------+
+| Inspection (derived)            |
+|---------------------------------|
+| + encroachment                  |
+| + affectedArea                  |
+| + enterInspectionDetails()      |
+| + displayInspectionDetails()    |
++---------------------------------+
+               ^
+               | inherits (public)
++---------------------------------+
+| RestorationOperation (derived)  |
+|---------------------------------|
+| + seedlingsPlanted              |
+| + enterRestorationDetails()     |
+| + displayRestorationDetails()   |
++---------------------------------+
+*/
 
 import std;
 using namespace std;
