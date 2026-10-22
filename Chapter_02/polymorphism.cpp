@@ -1,42 +1,4 @@
-//POLYMORPHISM
-// interactive Flood Emergency Response System
-//Problem statement
-//During flooding, an emergency coordinator may need to evacuate residents, 
-//distribute relief supplies, or clear blocked drainage channels.
- //Design a C++ program that uses runtime polymorphism to perform these operations
- //through a common virtual function. The user should select an operation at runtime.
 
- //Explanation
-//EmergencyResponse is the parent class and defines the virtual function respond().
-//Evacuation, ReliefDistribution, and DrainageClearing inherit from the parent class.
-//Each derived class overrides respond() to perform a different operation.
-//EmergencyResponse* response declares a base-class pointer.
-//The switch statement makes the pointer refer to the object selected by the user.
-//The call response->respond() executes the correct overridden function at runtime.
-//The same function call produces different behaviours depending on the object. This demonstrates runtime polymorphism.
-/*
-CLASS DIAGRAM (Runtime Polymorphism)
-
-+----------------------------------+
-| EmergencyResponse (parent)       |
-|----------------------------------|
-| + virtual void respond()         |
-+----------------------------------+
-        ^          ^          ^
-        |          |          |
-        | inherit (public)    |
-        |          |          |
-+---------------+ +--------------------+ +--------------------+
-| Evacuation    | | ReliefDistribution | | DrainageClearing   |
-|---------------| |--------------------| |--------------------|
-| + respond()   | | + respond()        | | + respond()        |
-|   override    | |   override         | |   override         |
-+---------------+ +--------------------+ +--------------------+
-
-EmergencyResponse* response is a base-class pointer.
-response->respond() calls the overridden version of the object
-selected by the user at runtime.
-*/
  import std;
 using namespace std;
 
@@ -107,11 +69,4 @@ response->respond();//calls the overridden function at runtime
 
 return 0;
 }
-//sample run
-//FLOOD EMERGENCY RESPONSE SYSTEM
-//1. Evacuate residents
-//2. Distribute relief supplies
-//3. Clear blocked drainage
-//Enter your choice: 2
-//Distributing food and clean water.
-//PS C:\Users\HP\Desktop\C++ YEAR TWO\CMP2103-OOP-with-C--1\Chapter_02> 
+
