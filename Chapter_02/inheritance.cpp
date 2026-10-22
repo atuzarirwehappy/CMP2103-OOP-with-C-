@@ -1,48 +1,4 @@
-//read-me
-//MULTILEVEL INHERITANCE
-// INTERACTIVE Wetland Restoration Monitoring System
-//Problem statement
-//Wetland monitoring officers in Uganda need a system to record wetland details,
-//document encroachment observed during inspections, and record restoration activities. 
- //Design a C++ program using multilevel inheritance that allows an officer to enter the information at runtime
-  //and display a complete report.
 
-//ILLUSTRATION
-//WetlandSite stores the wetlandName and location
-//Inspection inherits from WetlandSite and adds inspection information(encroachment and affected area)
-//RestorationOperation inherits from Inspection information and adds restoration information (seedlingsPlanted)
-// multi-level inheritance occurs when a class inherits(properties and functions)from another derived class, forming a chain of inheritance
-/*
-CLASS DIAGRAM (Multi-Level Inheritance)
-
-+---------------------------------+
-| WetlandSite (base class)        |
-|---------------------------------|
-| + wetlandName                   |
-| + location                      |
-| + enterSiteDetails()            |
-| + displaySiteDetails()          |
-+---------------------------------+
-               ^
-               | inherits (public)
-+---------------------------------+
-| Inspection (derived)            |
-|---------------------------------|
-| + encroachment                  |
-| + affectedArea                  |
-| + enterInspectionDetails()      |
-| + displayInspectionDetails()    |
-+---------------------------------+
-               ^
-               | inherits (public)
-+---------------------------------+
-| RestorationOperation (derived)  |
-|---------------------------------|
-| + seedlingsPlanted              |
-| + enterRestorationDetails()     |
-| + displayRestorationDetails()   |
-+---------------------------------+
-*/
 
 import std;
 using namespace std;
